@@ -1,0 +1,49 @@
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* 
+
+  font-family: "DM Sans", sans-serif;         PARA TEXTO GRAL
+  font-family: "Playfair Display", serif;     PARA TITULOS
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+*/
+
+:root {
+  /* ===== FONDOS ===== */
+  --color-bg: #f4efe6;
+  --color-surface: #fffcf7;
+  --color-surface-alt: #e8ddcc;
+  --color-bg-dark: #263a32;
+
+  /* ===== TEXTOS ===== */
+  --color-text: #252823;
+  --color-text-muted: #656a60;
+  --color-text-light: #f4efe6;
+
+  /* ===== COLORES DE MARCA ===== */
+  --color-primary: #263a32;
+  --color-accent: #bd754f;
+  --color-accent-light: #d9bd91;
+  --color-sage: #a7b39a;
+  --color-wine: #743d3d;
+  --color-mustard: #c9a34b;
+
+  /* ===== ESTADOS ===== */
+  --color-success: #387653;
+  --color-error: #b33d36;
+  --color-warning: #91651d;
+  --color-info: #356783;
+
+  /* ===== BORDES Y SOMBRAS ===== */
+  --color-border: #d8d3cb;
+  --color-shadow: rgba(37, 40, 35, 0.12);
+
+  /* ===== BOTONES ===== */
+  --color-button-bg: #bd754f;
+  --color-button-text: #ffffff;
+  --color-button-hover: #a8613f;
+}
