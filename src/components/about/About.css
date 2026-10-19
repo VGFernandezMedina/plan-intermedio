@@ -1,0 +1,7 @@
+.about {
+  background-color: aquamarine;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
