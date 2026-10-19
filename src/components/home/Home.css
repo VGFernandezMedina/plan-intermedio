@@ -1,12 +1,152 @@
 .home {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(/home.jpg);
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/home.jpg");
+
   background-position: center;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+
+  color: white;
 
   display: flex;
   align-items: center;
-  color: white;
+  justify-content: flex-start;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  padding: 6rem clamp(1.5rem, 8vw, 8rem);
+}
+
+.home-content {
+  width: 100%;
+  max-width: 650px;
+  padding-top: 0.5rem;
+}
+
+.home-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.1rem;
+}
+
+.home h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.8rem;
+}
+
+.home-description {
+  max-width: 480px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 2rem;
+}
+
+.home-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.home-buttons .btn {
+  padding: 0.65rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-menu {
+  background-color: #bd754f;
+  border: 1px solid #bd754f;
+  color: #fff;
+}
+
+.btn-menu:hover {
+  background-color: #a8613f;
+  border-color: #a8613f;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-reservar {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.btn-reservar:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #263a32;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .home {
+    justify-content: center;
+    text-align: center;
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .home-content {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .home h1 {
+    font-size: clamp(2.8rem, 10vw, 4rem);
+  }
+
+  .home-subtitle {
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+  }
+
+  .home-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 380px;
+  }
+
+  .home-buttons {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .home-buttons .btn {
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .home-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-buttons .btn {
+    width: 100%;
+    padding: 0.6rem 1.5rem;
+    font-weight: 400;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-buttons .btn {
+    transition: none;
+  }
+
+  .home-buttons .btn:hover {
+    transform: none;
+  }
 }

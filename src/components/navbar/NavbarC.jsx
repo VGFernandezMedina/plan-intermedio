@@ -7,7 +7,7 @@ const NavbarC = () => {
     <Navbar expand="lg" className="restaurant-navbar" collapseOnSelect>
       <Container>
         <Navbar.Brand as={Link} to="/" className="brand">
-          <span>Mi Restaurante</span>
+          <span>El Viejo Sauce</span>
         </Navbar.Brand>
 
         <Navbar.Toggle
