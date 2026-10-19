@@ -1,0 +1,86 @@
+.restaurant-navbar {
+  background-color: transparent;
+  padding: 16px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.restaurant-navbar .container {
+  display: flex;
+  align-items: center;
+}
+.restaurant-navbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.restaurant-navbar .navbar-collapse {
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurant-navbar .navbar-links {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+.restaurant-navbar .nav-link {
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  transition: color 0.2s ease;
+}
+.restaurant-navbar .nav-link:hover {
+  color: #d8a45e;
+}
+
+.restaurant-navbar .reserve-button {
+  background-color: #d8a45e;
+  border: 1px solid #d8a45e;
+  color: #172329;
+  padding: 10px 24px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.restaurant-navbar .reserve-button:hover {
+  background-color: #e7bb7c;
+  border-color: #e7bb7c;
+  color: #172329;
+}
+
+@media (max-width: 991.98px) {
+  .restaurant-navbar .navbar-collapse {
+    flex-grow: 0;
+    width: 100%;
+    padding-top: 16px;
+  }
+  .restaurant-navbar .navbar-links {
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+  }
+  .restaurant-navbar .nav-link {
+    padding: 10px 0;
+  }
+  .restaurant-navbar .reserve-button {
+    width: 100%;
+    margin-top: 12px;
+  }
+}
