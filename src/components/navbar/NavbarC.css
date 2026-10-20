@@ -51,18 +51,19 @@
 }
 
 .restaurant-navbar .reserve-button {
-  background-color: #d8a45e;
-  border: 1px solid #d8a45e;
-  color: #172329;
-  padding: 10px 24px;
   font-family: "DM Sans", sans-serif;
-  font-weight: 600;
+  background-color: var(--color-button-bg);
+  border: 1px solid var(--color-button-bg);
+  color: white;
+  padding: 10px 40px;
+  font-weight: 400;
   white-space: nowrap;
+  border-radius: 50px;
 }
 .restaurant-navbar .reserve-button:hover {
-  background-color: #e7bb7c;
-  border-color: #e7bb7c;
-  color: #172329;
+  background-color: var(--color-button-hover);
+  border-color: var(--color-button-hover);
+  color: white;
 }
 
 @media (max-width: 991.98px) {

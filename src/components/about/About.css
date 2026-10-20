@@ -1,7 +1,156 @@
 .about {
-  background-color: aquamarine;
-  height: 50vh;
+  background-color: var(--color-surface-alt);
+  min-height: 90vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 6rem clamp(1.5rem, 8vw, 8rem);
+}
+
+.about-content {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-wine);
+  margin-bottom: 1.5rem;
+}
+
+.about-subtitle::before,
+.about-subtitle::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  flex-shrink: 0;
+  background-color: var(--color-wine);
+  opacity: 0.5;
+}
+
+.about-title {
+  max-width: 900px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 4.5vw, 5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--color-wine);
+  margin-bottom: 2rem;
+  text-wrap: balance;
+}
+
+.about-description {
+  max-width: 760px;
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+
+.about-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-buttons .btn {
+  padding: 0.85rem 3rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn-about {
+  background-color: var(--color-wine);
+  border: 1px solid var(--color-wine);
+  color: #fff;
+}
+.btn-about:hover {
+  background-color: #633434;
+  border-color: #633434;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .about {
+    min-height: auto;
+    padding: 6rem 2rem;
+  }
+  .about-title {
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+  }
+  .about-description {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    padding: 5rem 1.25rem;
+  }
+  .about-subtitle {
+    gap: 0.65rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.25rem;
+  }
+  .about-subtitle::before,
+  .about-subtitle::after {
+    width: 24px;
+  }
+  .about-title {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+  .about-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.75rem;
+  }
+  .about-buttons {
+    width: 100%;
+  }
+  .about-buttons .btn {
+    padding: 0.6rem 2.5rem;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 360px) {
+  .about {
+    padding: 4rem 1rem;
+  }
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-subtitle::before,
+  .about-subtitle::after {
+    width: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-buttons .btn {
+    transition: none;
+  }
+  .about-buttons .btn:hover {
+    transform: none;
+  }
 }

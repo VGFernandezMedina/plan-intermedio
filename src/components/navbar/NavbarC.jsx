@@ -34,7 +34,6 @@ const NavbarC = () => {
             </Nav.Link>
           </Nav>
 
-          {/* Botón reservar */}
           <Button as={Link} to="/reservar" className="reserve-button">
             Reservar
           </Button>
