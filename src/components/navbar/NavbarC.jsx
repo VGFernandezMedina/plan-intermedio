@@ -7,6 +7,11 @@ const NavbarC = () => {
     <Navbar expand="lg" className="restaurant-navbar" collapseOnSelect>
       <Container>
         <Navbar.Brand as={Link} to="/" className="brand">
+          <img
+            src="/logo.webp"
+            alt="Logo del Viejo Sauce"
+            className="brand-logo"
+          />
           <span>El Viejo Sauce</span>
         </Navbar.Brand>
 
