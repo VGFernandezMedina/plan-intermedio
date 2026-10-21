@@ -21,8 +21,9 @@
 
 .menu-header h2 {
   font-family: "Playfair Display", serif;
-  color: var(--color-primary);
   font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 700;
+  color: var(--color-primary);
   line-height: 1.15;
   margin-bottom: 1rem;
 }
