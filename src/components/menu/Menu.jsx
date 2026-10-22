@@ -11,7 +11,7 @@ const dishes = [
     category: "Entradas",
     description: "Carne cortada a cuchillo y especias.",
     price: "$6.000",
-    image: "/public/empanadas.webp",
+    image: "/empanadas.webp",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const dishes = [
     category: "Entradas",
     description: "Verduras frescas y hierbas aromáticas.",
     price: "$7.500",
-    image: "/public/Sopa.webp",
+    image: "/Sopa.webp",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const dishes = [
     category: "Principales",
     description: "Con papas doradas y limón.",
     price: "$12.500",
-    image: "/public/milanesas.webp",
+    image: "/milanesas.webp",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const dishes = [
     category: "Principales",
     description: "Pasta casera con salsa de tomate.",
     price: "$11.000",
-    image: "/public/Pasta.webp",
+    image: "/Pasta.webp",
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ const dishes = [
     category: "Postres",
     description: "Con dulce de leche y crema.",
     price: "$5.000",
-    image: "/public/flan.webp",
+    image: "/flan.webp",
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const dishes = [
     category: "Bebidas",
     description: "Café recién molido, intenso y aromático.",
     price: "$3.500",
-    image: "/public/cafe.webp",
+    image: "/cafe.webp",
   },
 ];
 

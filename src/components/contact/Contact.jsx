@@ -5,19 +5,14 @@ import ReservationForm from "../reservationform/ReservationForm";
 const Contact = () => {
   return (
     <Container fluid className="contact p-0">
-      <Row className="g-0 min-vh-100">
+      <Row className="g-0">
         <Col sm="12" md="6" lg="6" className="contact-left-col">
           <div className="contact-content-wrapper">
-            <span className="contact-subtitle">Reservas & Contacto</span>
-            <h2>Vení a conocernos</h2>
-            <p className="contact-description">
-              Hacé tu reserva con anticipación o consultanos lo que necesites.
-              Te esperamos en nuestra esquina para disfrutar de un buen momento.
-            </p>
+            <span className="contact-subtitle">Reservas & Ubicación</span>
 
             <ReservationForm />
 
-            <div className="contact-info mt-4">
+            <div className="contact-info">
               <div className="info-item">
                 <strong>📍 Dirección:</strong> Esquina San Martín y Junín,
                 Tucumán
@@ -27,7 +22,7 @@ const Contact = () => {
                 hs.
               </div>
               <div className="info-item">
-                <strong>📞 Teléfono:</strong> +54 9 381 123-4567
+                <strong>📞 Teléfono:</strong> +54 9 381 613-5750
               </div>
             </div>
           </div>
@@ -39,7 +34,7 @@ const Contact = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Ubicación de El Sauce"
+            title="Ubicación de El Viejo Sauce"
           />
         </Col>
       </Row>

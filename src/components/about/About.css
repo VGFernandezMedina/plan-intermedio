@@ -1,7 +1,12 @@
 .about {
-  background-color: var(--color-surface-alt);
-  min-height: 90vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/about.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,11 +16,10 @@
 
 .about-content {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: start;
 }
 
 .about-subtitle {
@@ -27,7 +31,7 @@
   font-size: clamp(0.8rem, 1.2vw, 1.1rem);
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--color-wine);
+  color: var(--color-accent-light);
   margin-bottom: 1.5rem;
 }
 
@@ -37,7 +41,7 @@
   width: 40px;
   height: 1px;
   flex-shrink: 0;
-  background-color: var(--color-wine);
+  background-color: var(--color-accent-light);
   opacity: 0.5;
 }
 
@@ -47,16 +51,16 @@
   font-size: clamp(2.5rem, 4.5vw, 5rem);
   font-weight: 700;
   line-height: 1.12;
-  color: var(--color-wine);
+  color: var(--color-accent-light);
   margin-bottom: 2rem;
   text-wrap: balance;
 }
 
 .about-description {
-  max-width: 760px;
-  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  max-width: 650px;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
   line-height: 1.5;
-  color: var(--color-text-muted);
+  color: var(--color-text-light);
   margin-bottom: 2rem;
 }
 
@@ -67,7 +71,7 @@
 }
 
 .about-buttons .btn {
-  padding: 0.85rem 3rem;
+  padding: 0.7rem 3rem;
   border-radius: 6px;
   transition:
     background-color 0.3s ease,
@@ -75,14 +79,15 @@
 }
 
 .btn-about {
-  background-color: var(--color-wine);
-  border: 1px solid var(--color-wine);
-  color: #fff;
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  color: white;
+  font-weight: 600;
 }
 .btn-about:hover {
-  background-color: #633434;
-  border-color: #633434;
-  color: #fff;
+  background-color: #a8613f;
+  border-color: #a8613f;
+  color: white;
 }
 
 @media (max-width: 992px) {
@@ -102,6 +107,10 @@
 @media (max-width: 576px) {
   .about {
     padding: 5rem 1.25rem;
+  }
+  .about-content {
+    align-items: center;
+    text-align: center;
   }
   .about-subtitle {
     gap: 0.65rem;
