@@ -1,10 +1,34 @@
+import { useState, useEffect } from "react";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./NavbarC.css";
 
 const NavbarC = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Limpiamos el evento al desmontar el componente
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <Navbar expand="lg" className="restaurant-navbar" collapseOnSelect>
+    <Navbar
+      expand="lg"
+      className={`restaurant-navbar ${scrolled ? "scrolled" : ""}`}
+      collapseOnSelect
+    >
       <Container>
         <Navbar.Brand as={Link} to="/" className="brand">
           <img

@@ -149,7 +149,7 @@
   color: white;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
   .menu-section {
     padding: 5rem 2rem;
   }
