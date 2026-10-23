@@ -1,7 +1,133 @@
 .footer {
-  background-color: darkgreen;
-  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primary, #263a32);
+  padding: 4rem 1rem 0 1rem;
+  color: var(--color-text-light, #f4efe6);
+  width: 100%;
+}
+
+.footer-info {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  gap: 2rem 0;
+}
+
+.footer-col-logo {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+.footer-col-logo img {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+.footer-col-logo p {
+  color: var(--color-text-light, #f4efe6);
+  max-width: 400px;
+  font-size: 1rem;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+.footer-col-links,
+.footer-col-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.footer-col-links h5,
+.footer-col-contact h5 {
+  font-family: "Playfair Display", serif;
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.footer-col-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-col-links a {
+  color: var(--color-text-light, #f4efe6);
+  text-decoration: none;
+  font-size: 1rem;
+  opacity: 0.8;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+.footer-col-links a:hover {
+  opacity: 1;
+  color: var(--color-accent-light, #d9bd91);
+}
+
+.footer-col-contact {
+  gap: 0.4rem;
+}
+.footer-col-contact p {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  background-color: var(--color-primary, #263a32);
+  padding: 1rem 0;
+  margin: 0;
+  width: 100%;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.footer-icon {
+  font-size: 25px;
+  color: var(--color-sage, #a7b39a);
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-icon:hover {
+  color: var(--color-accent-light, #d9bd91);
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .footer-info {
+    text-align: left;
+  }
+
+  .footer-col-logo,
+  .footer-col-links,
+  .footer-col-contact {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .footer-icons {
+    justify-content: flex-end;
+  }
 }
