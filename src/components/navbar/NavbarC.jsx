@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./NavbarC.css";
 
 const NavbarC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,17 +18,15 @@ const NavbarC = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Limpiamos el evento al desmontar el componente
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <Navbar
       expand="lg"
-      className={`restaurant-navbar ${scrolled ? "scrolled" : ""}`}
+      className={`restaurant-navbar ${scrolled ? "scrolled" : ""} ${
+        !isHomePage ? "navbar-standalone" : ""
+      }`}
       collapseOnSelect
     >
       <Container>

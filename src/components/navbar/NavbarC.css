@@ -4,12 +4,19 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
   padding: 1rem 0;
   transition:
     background-color 0.3s ease,
     padding 0.3s ease,
     box-shadow 0.3s ease;
+}
+
+.restaurant-navbar.navbar-standalone {
+  position: sticky;
+  background-color: var(--color-primary);
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .restaurant-navbar.scrolled {
