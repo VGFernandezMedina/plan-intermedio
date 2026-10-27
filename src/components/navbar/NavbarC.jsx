@@ -57,10 +57,6 @@ const NavbarC = () => {
             <Nav.Link as={Link} to="/nosotros">
               Nosotros
             </Nav.Link>
-
-            <Nav.Link as={Link} to="/contacto">
-              Contacto
-            </Nav.Link>
           </Nav>
 
           <Button as={Link} to="/reservar" className="reserve-button">

@@ -1,10 +1,10 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/homepage/HomePage";
 import NavbarC from "./components/navbar/NavbarC";
 import Footer from "./components/footer/Footer";
 import SobreNosotros from "./pages/sobrenosotros/SobreNosotros";
-import Contacto from "./pages/contacto/Contacto";
+import MenuPage from "./pages/menupage/MenuPage";
 
 const App = () => {
   return (
@@ -12,8 +12,8 @@ const App = () => {
       <NavbarC />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/menu" element={<MenuPage />} />
         <Route path="/nosotros" element={<SobreNosotros />} />
-        <Route path="/contacto" element={<Contacto />} />
       </Routes>
       <Footer />
     </>
