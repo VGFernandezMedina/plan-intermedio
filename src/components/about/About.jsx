@@ -1,9 +1,29 @@
+import { useEffect, useState } from "react";
 import { Button, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./About.css";
 
 const About = () => {
+  const [offsetY, setOffsetY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setOffsetY(window.scrollY * 0.3);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <Container fluid className="about">
+      <div
+        className="about-bg-parallax"
+        style={{ transform: `translateY(${offsetY}px)` }}
+      ></div>
+
+      <div className="about-overlay"></div>
+
       <div className="about-content">
         <p className="about-subtitle">Nuestra Historia</p>
 
@@ -17,7 +37,7 @@ const About = () => {
         </p>
 
         <div className="about-buttons">
-          <Button className="btn-about" href="/about">
+          <Button as={Link} to="/nosotros" className="btn-about">
             Ver más
           </Button>
         </div>

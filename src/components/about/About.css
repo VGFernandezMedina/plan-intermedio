@@ -1,20 +1,41 @@
 .about {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/about.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-
+  position: relative;
+  overflow: hidden;
   min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 6rem clamp(1.5rem, 8vw, 8rem);
+  color: white;
+}
+
+.about-bg-parallax {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  background-image: url("/about.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  will-change: transform;
+}
+
+.about-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
 }
 
 .about-content {
+  position: relative;
+  z-index: 3;
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -27,14 +48,12 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-
   font-size: clamp(0.8rem, 1.2vw, 1.1rem);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--color-accent-light);
   margin-bottom: 1.5rem;
 }
-
 .about-subtitle::before,
 .about-subtitle::after {
   content: "";
@@ -69,7 +88,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .about-buttons .btn {
   padding: 0.7rem 3rem;
   border-radius: 6px;
@@ -77,7 +95,6 @@
     background-color 0.3s ease,
     color 0.3s ease;
 }
-
 .btn-about {
   background-color: var(--color-accent);
   border: 2px solid var(--color-accent);
