@@ -8,7 +8,6 @@
     padding 0.3s ease,
     box-shadow 0.3s ease;
 }
-
 .restaurant-navbar {
   position: fixed;
   top: 0;
@@ -22,18 +21,15 @@
     padding 0.3s ease,
     box-shadow 0.3s ease;
 }
-
 .restaurant-navbar.scrolled {
   background-color: var(--color-primary, #263a32);
-  padding: 0.3rem 0;
+  padding: 0 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
-
 .restaurant-navbar .container {
   display: flex;
   align-items: center;
 }
-
 .restaurant-navbar .brand {
   display: flex;
   align-items: center;
@@ -55,13 +51,11 @@
 .restaurant-navbar.scrolled .brand-logo {
   transform: scale(0.8);
 }
-
 .restaurant-navbar .navbar-collapse {
   flex-grow: 1;
   align-items: center;
   justify-content: space-between;
 }
-
 .restaurant-navbar .navbar-links {
   display: flex;
   flex-direction: row;
@@ -70,17 +64,14 @@
   letter-spacing: 1px;
   font-weight: 300;
 }
-
 .restaurant-navbar .nav-link {
   color: white;
   font-family: "DM Sans", sans-serif;
   transition: color 0.2s ease;
 }
-
 .restaurant-navbar .nav-link:hover {
   color: #d8a45e;
 }
-
 .restaurant-navbar .reserve-button {
   font-family: "DM Sans", sans-serif;
   background-color: var(--color-button-bg);
@@ -94,20 +85,17 @@
     background-color 0.3s ease,
     border-color 0.3s ease;
 }
-
 .restaurant-navbar .reserve-button:hover {
   background-color: var(--color-button-hover);
   border-color: var(--color-button-hover);
   color: white;
 }
-
 .restaurant-navbar .navbar-toggler {
   border: none !important;
   background-color: transparent !important;
   padding: 0.25rem 0.5rem;
   box-shadow: none !important;
 }
-
 .restaurant-navbar .navbar-toggler-icon {
   filter: brightness(0) invert(1);
 }
@@ -117,7 +105,6 @@
     background-color: var(--color-primary);
     padding: 5px;
   }
-
   .restaurant-navbar .navbar-collapse {
     position: static;
     float: none;

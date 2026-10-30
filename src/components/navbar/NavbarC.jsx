@@ -21,6 +21,16 @@ const NavbarC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleReservarClick = (e) => {
+    if (isHomePage) {
+      e.preventDefault();
+      const element = document.getElementById("reservas");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <Navbar
       expand="lg"
@@ -59,7 +69,12 @@ const NavbarC = () => {
             </Nav.Link>
           </Nav>
 
-          <Button as={Link} to="/contacto" className="reserve-button">
+          <Button
+            as={Link}
+            to="/#reservas"
+            onClick={handleReservarClick}
+            className="reserve-button"
+          >
             Reservar
           </Button>
         </Navbar.Collapse>

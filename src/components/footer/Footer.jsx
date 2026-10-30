@@ -18,7 +18,13 @@ const Footer = () => {
     <Container fluid className="footer">
       <Row className="footer-info">
         <Col sm="12" md="4" lg="6" className="footer-col-logo">
-          <img src="/logo.webp" alt="Logo de El Viejo Sauce" />
+          <Link to="/" aria-label="Ir al inicio">
+            <img
+              src="/logo.webp"
+              alt="Logo de El Viejo Sauce"
+              className="footer-logo-img"
+            />
+          </Link>
           <p>
             Cocina artesanal, cafés de especialidad y momentos al aire libre en
             el corazón de Tucumán. Tu esquina de siempre bajo la sombra del
@@ -37,9 +43,6 @@ const Footer = () => {
             </li>
             <li>
               <Link to="/nosotros">Nosotros</Link>
-            </li>
-            <li>
-              <Link to="/contacto">Contacto & Reservas</Link>
             </li>
           </ul>
         </Col>

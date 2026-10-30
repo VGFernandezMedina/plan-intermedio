@@ -176,7 +176,7 @@ const MenuPage = () => {
 
           <div className="menu-page-cta text-center mt-4">
             <p>¿Querés venir a disfrutar de nuestra esquina?</p>
-            <Button as={Link} to="/contacto" className="btn-about-primary">
+            <Button as={Link} to="/#reservas" className="btn-about-primary">
               Reservar Mesa
             </Button>
           </div>

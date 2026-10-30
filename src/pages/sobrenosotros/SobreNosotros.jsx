@@ -44,7 +44,7 @@ const SobreNosotros = () => {
               >
                 Ver Menú
               </Button>
-              <Button as={Link} to="/contacto" className="btn-about-secondary">
+              <Button as={Link} to="/#reservas" className="btn-about-secondary">
                 Reservar Mesa
               </Button>
             </div>

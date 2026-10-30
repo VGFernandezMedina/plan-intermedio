@@ -5,10 +5,12 @@ import NavbarC from "./components/navbar/NavbarC";
 import Footer from "./components/footer/Footer";
 import SobreNosotros from "./pages/sobrenosotros/SobreNosotros";
 import MenuPage from "./pages/menupage/MenuPage";
+import ScrollToTop from "./components/scrolltotop/ScrollToTop";
 
 const App = () => {
   return (
     <>
+      <ScrollToTop />
       <NavbarC />
       <Routes>
         <Route path="/" element={<HomePage />} />

@@ -7,7 +7,7 @@ import { MdOutlineLocalPhone } from "react-icons/md";
 
 const Contact = () => {
   return (
-    <Container fluid className="contact p-0">
+    <Container fluid className="contact p-0" id="reservas">
       <Row className="g-0">
         <Col
           sm="12"
