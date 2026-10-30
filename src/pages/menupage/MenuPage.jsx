@@ -110,16 +110,36 @@ const MenuPage = () => {
     <div className="menu-editorial-container">
       <section className="menu-editorial-section py-5">
         <Container>
-          <div className="menu-header text-center mb-5">
-            <span className="about-subtitle-page">Nuestra Carta Completa</span>
-            <h1 className="about-title-page">El Sabor de la Tradición</h1>
-            <p className="menu-description">
+          <div className="menu-header-page text-center mb-5">
+            <span
+              className="about-subtitle-page"
+              data-aos="fade-up"
+              data-aos-delay="0"
+            >
+              Nuestra Carta Completa
+            </span>
+            <h1
+              className="about-title-page"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              El Sabor de la Tradición
+            </h1>
+            <p
+              className="menu-description"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               Un recorrido por los sabores de siempre, elaborados con productos
               frescos de la región y la dedicación que nos caracteriza.
             </p>
           </div>
 
-          <Row className="justify-content-center">
+          <Row
+            className="justify-content-center"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <Col lg={10}>
               <div className="editorial-menu-box">
                 {menuSections.map((section, idx) => (
@@ -160,56 +180,6 @@ const MenuPage = () => {
               Reservar Mesa
             </Button>
           </div>
-        </Container>
-      </section>
-
-      <section className="menu-testimonials-section py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <span className="about-subtitle-page">
-              Lo que dicen de nosotros
-            </span>
-            <h2 className="faq-main-title">Experiencias en el Sauce</h2>
-          </div>
-
-          <Row className="g-4">
-            <Col lg={4} md={6}>
-              <div className="testimonial-card">
-                <p className="testimonial-comment">
-                  "Leer la carta y sentarse bajo la sombra del sauce es de las
-                  mejores experiencias en Tucumán. Las empanadas son un 10."
-                </p>
-                <div className="testimonial-author">
-                  <strong>Mariana G.</strong>
-                  <span>Cliente frecuente</span>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} md={6}>
-              <div className="testimonial-card">
-                <p className="testimonial-comment">
-                  "El café de especialidad y la pastelería casera son
-                  increíbles. Un lugar que cuida cada detalle al máximo."
-                </p>
-                <div className="testimonial-author">
-                  <strong>Lucas R.</strong>
-                  <span>Amante del café</span>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} md={12}>
-              <div className="testimonial-card">
-                <p className="testimonial-comment">
-                  "Ideal para ir en familia un domingo al mediodía. Las pastas
-                  caseras tienen ese sabor a hogar inigualable."
-                </p>
-                <div className="testimonial-author">
-                  <strong>Sofía M.</strong>
-                  <span>Cena familiar</span>
-                </div>
-              </div>
-            </Col>
-          </Row>
         </Container>
       </section>
     </div>

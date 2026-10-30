@@ -83,18 +83,18 @@
   margin-bottom: 2rem;
 }
 
-.about-buttons {
+.about-actions {
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
-.about-buttons .btn {
+.about-actions .btn {
   padding: 0.7rem 3rem;
   border-radius: 6px;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+  transition: all 0.3s ease;
 }
+
 .btn-about {
   background-color: var(--color-accent);
   border: 2px solid var(--color-accent);
@@ -105,6 +105,38 @@
   background-color: #a8613f;
   border-color: #a8613f;
   color: white;
+}
+.btn-about:focus {
+  background-color: var(--color-accent) !important;
+  border: 2px solid var(--color-accent) !important;
+}
+
+.about-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.social-icon-link:hover {
+  background-color: var(--color-accent, #bd754f);
+  border-color: var(--color-accent, #bd754f);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 992px) {
@@ -149,10 +181,13 @@
     line-height: 1.5;
     margin-bottom: 1.75rem;
   }
-  .about-buttons {
+  .about-actions {
     width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
   }
-  .about-buttons .btn {
+  .about-actions .btn {
     padding: 0.6rem 2.5rem;
     font-weight: 400;
   }
@@ -172,10 +207,12 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .about-buttons .btn {
+  .about-actions .btn,
+  .social-icon-link {
     transition: none;
   }
-  .about-buttons .btn:hover {
+  .about-actions .btn:hover,
+  .social-icon-link:hover {
     transform: none;
   }
 }

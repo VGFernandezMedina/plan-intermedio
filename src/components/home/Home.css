@@ -1,6 +1,7 @@
 .home {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/home.jpg");
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.35)), url("/home.webp");
 
   background-position: center;
   background-repeat: no-repeat;
@@ -18,7 +19,35 @@
   padding: 6rem clamp(1.5rem, 8vw, 8rem);
 }
 
+.home-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.45) 60%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  z-index: 1;
+  transform-origin: left;
+  animation: gradientSlideRight 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes gradientSlideRight {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
 .home-content {
+  position: relative;
+  z-index: 2;
   width: 100%;
   max-width: 650px;
   padding-top: 0.5rem;
@@ -29,7 +58,6 @@
   letter-spacing: 0.08em;
   margin-bottom: 0.1rem;
 }
-
 .home h1 {
   font-family: "Playfair Display", serif;
   font-size: clamp(3rem, 6vw, 6rem);
@@ -37,7 +65,6 @@
   line-height: 1.1;
   margin-bottom: 1.8rem;
 }
-
 .home-description {
   max-width: 480px;
   font-size: 1.05rem;
@@ -52,7 +79,6 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
-
 .home-buttons .btn {
   padding: 0.65rem 1.4rem;
   border-radius: 6px;
@@ -61,16 +87,19 @@
     background-color 0.3s ease,
     color 0.3s ease;
 }
-
 .btn-menu {
-  background-color: #bd754f;
-  border: 1px solid #bd754f;
+  background-color: var(--color-primary);
+  border: 1px solid #496d5e;
   color: #fff;
 }
 .btn-menu:hover {
-  background-color: #a8613f;
-  border-color: #a8613f;
+  background-color: #365247;
+  border-color: #385449;
   color: #fff;
+}
+.btn-menu:focus {
+  background-color: var(--color-primary) !important;
+  border: 1px solid #385449 !important;
 }
 
 .btn-reservar {
@@ -82,6 +111,11 @@
   background-color: #fff;
   border-color: #fff;
   color: #263a32;
+}
+.btn-reservar:focus {
+  background-color: transparent !important;
+  border: 1px solid #fff !important;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -130,6 +164,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .home-gradient-reveal {
+    animation: none;
+    transform: scaleX(1);
+  }
   .home-buttons .btn {
     transition: none;
   }

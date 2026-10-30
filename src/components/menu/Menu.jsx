@@ -69,16 +69,29 @@ const Menu = () => {
     <section className="menu-section" id="menu">
       <Container>
         <div className="menu-header">
-          <p className="menu-subtitle">Nuestra carta</p>
+          <p className="menu-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Nuestra carta
+          </p>
 
-          <h2>Sabores para disfrutar</h2>
+          <h2 data-aos="fade-up" data-aos-delay="200">
+            Sabores para disfrutar
+          </h2>
 
-          <p className="menu-description">
+          <p
+            className="menu-description"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             Cocina de barrio, ingredientes frescos y recetas hechas con cariño.
           </p>
         </div>
 
-        <div className="menu-filters" aria-label="Filtrar platos por categoría">
+        <div
+          className="menu-filters"
+          aria-label="Filtrar platos por categoría"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           {categories.map(function (category) {
             return (
               <Button
@@ -100,7 +113,7 @@ const Menu = () => {
           })}
         </div>
 
-        <div className="menu-grid">
+        <div className="menu-grid" data-aos="fade-up" data-aos-delay="400">
           {filteredDishes.map(function (dish) {
             return (
               <article className="menu-card" key={dish.id}>

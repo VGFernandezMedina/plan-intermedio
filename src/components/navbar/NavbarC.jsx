@@ -10,7 +10,7 @@ const NavbarC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 30) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -24,9 +24,9 @@ const NavbarC = () => {
   return (
     <Navbar
       expand="lg"
-      className={`restaurant-navbar ${scrolled ? "scrolled" : ""} ${
+      className={`restaurant-navbar ${
         !isHomePage ? "navbar-standalone" : ""
-      }`}
+      } ${scrolled ? "scrolled" : ""}`}
       collapseOnSelect
     >
       <Container>
@@ -59,7 +59,7 @@ const NavbarC = () => {
             </Nav.Link>
           </Nav>
 
-          <Button as={Link} to="/reservar" className="reserve-button">
+          <Button as={Link} to="/contacto" className="reserve-button">
             Reservar
           </Button>
         </Navbar.Collapse>

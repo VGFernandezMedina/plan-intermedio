@@ -1,8 +1,15 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaRegClock,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { AiOutlineYoutube } from "react-icons/ai";
+import { FiMapPin } from "react-icons/fi";
+import { MdOutlineLocalPhone } from "react-icons/md";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -37,12 +44,20 @@ const Footer = () => {
           </ul>
         </Col>
 
-        {/* Columna 3: Horarios y Contacto */}
         <Col sm="12" md="4" lg="3" className="footer-col-contact">
           <h5>Visitanos</h5>
-          <p>📍 Esquina San Martín y Junín, Tucumán</p>
-          <p>🕒 Mar a Dom: 08:00 a 00:00 hs.</p>
-          <p>📞 +54 9 381 613-5750</p>
+          <p>
+            <FiMapPin className="footer-icon-contact" /> Esquina San Martín y
+            Junín
+          </p>
+          <p>
+            <FaRegClock className="footer-icon-contact" /> Mar a Dom: 08:00 a
+            00:00 hs.
+          </p>
+          <p>
+            <MdOutlineLocalPhone className="footer-icon-contact" /> +54 9 381
+            613-5750
+          </p>
         </Col>
       </Row>
 

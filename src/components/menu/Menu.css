@@ -137,16 +137,20 @@
 
 .menu-more-button {
   background-color: var(--color-primary);
-  border: 1px solid var(--color-primary);
+  border: 1px solid #496d5e;
   color: white;
   border-radius: 6px;
   padding: 0.8rem 1.8rem;
   transition: background-color 0.25s ease;
 }
 .menu-more-button:hover {
-  background-color: var(--color-bg-dark);
-  border-color: var(--color-bg-dark);
+  background-color: #365247;
+  border-color: #385449;
   color: white;
+}
+.menu-more-button:focus {
+  background-color: var(--color-primary) !important;
+  border: 1px solid #385449 !important;
 }
 
 @media (max-width: 991.98px) {

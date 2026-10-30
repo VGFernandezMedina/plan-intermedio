@@ -3,6 +3,7 @@
   color: var(--color-text, #2b2b2b);
   width: 100%;
   overflow-x: hidden;
+  padding-top: 70px;
 }
 
 .about-full-row {
@@ -62,7 +63,6 @@
   color: var(--color-text-muted, #555555);
 }
 
-/* --- Botones de Acción --- */
 .about-actions {
   display: flex;
   flex-wrap: wrap;
@@ -84,7 +84,6 @@
   border-color: var(--color-button-hover, #a3613f) !important;
   color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(189, 117, 79, 0.25);
 }
 
 .btn-about-secondary {

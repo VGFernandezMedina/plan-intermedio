@@ -1,15 +1,13 @@
 import { Row, Col, Container, Accordion, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./SobreNosotros.css";
-import about1 from "/about1.jpg";
+import about1 from "/about1.webp";
 
 const SobreNosotros = () => {
   return (
     <div className="about-page">
-      {/* Fila principal: Imagen + Descripción + Botones */}
       <Row className="g-0 align-items-stretch about-full-row">
-        {/* Columna 1 (50%): Imagen de borde a borde */}
-        <Col lg={6} className="p-0">
+        <Col lg={6} className="p-0" data-aos="fade-right">
           <div className="about-img-wrapper">
             <img
               src={about1}
@@ -19,8 +17,7 @@ const SobreNosotros = () => {
           </div>
         </Col>
 
-        {/* Columna 2 (50%): Títulos, descripción ampliada y acciones */}
-        <Col lg={6} className="about-content-col">
+        <Col lg={6} className="about-content-col" data-aos="fade-left">
           <div className="about-content-wrapper">
             <span className="about-subtitle-page">Sobre Nosotros</span>
             <h1 className="about-title-page">
@@ -39,7 +36,6 @@ const SobreNosotros = () => {
               la horneada del día.
             </p>
 
-            {/* Botones de acción */}
             <div className="about-actions">
               <Button
                 as={Link}
@@ -56,12 +52,23 @@ const SobreNosotros = () => {
         </Col>
       </Row>
 
-      {/* Sección de Preguntas Frecuentes (FAQ) */}
       <section className="faq-section py-5">
         <Container>
           <div className="text-center mb-5">
-            <span className="faq-subtitle-page">Dudas habituales</span>
-            <h2 className="faq-main-title">Preguntas Frecuentes</h2>
+            <span
+              className="faq-subtitle-page"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Dudas habituales
+            </span>
+            <h2
+              className="faq-main-title"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              Preguntas Frecuentes
+            </h2>
           </div>
 
           <Row className="justify-content-center">

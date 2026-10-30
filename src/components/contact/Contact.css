@@ -16,7 +16,7 @@
   color: var(--color-text-light);
 }
 
-.contact-content-wrapper {
+.contact-content {
   width: 100%;
   max-width: 520px;
 }
@@ -44,6 +44,12 @@
 .info-item {
   color: var(--color-text-light);
   opacity: 0.9;
+  display: flex;
+  gap: 10px;
+}
+.info-item strong {
+  display: flex;
+  gap: 5px;
 }
 
 .contact-map {
