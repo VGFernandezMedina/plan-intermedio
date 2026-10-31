@@ -1,13 +1,52 @@
+import { useState, useEffect } from "react";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./NavbarC.css";
 
 const NavbarC = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleReservarClick = (e) => {
+    if (isHomePage) {
+      e.preventDefault();
+      const element = document.getElementById("reservas");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
-    <Navbar expand="lg" className="restaurant-navbar" collapseOnSelect>
+    <Navbar
+      expand="lg"
+      className={`restaurant-navbar ${
+        !isHomePage ? "navbar-standalone" : ""
+      } ${scrolled ? "scrolled" : ""}`}
+      collapseOnSelect
+    >
       <Container>
         <Navbar.Brand as={Link} to="/" className="brand">
-          <span>Mi Restaurante</span>
+          <img
+            src="/logo.webp"
+            alt="Logo del Viejo Sauce"
+            className="brand-logo"
+          />
+          <span>El Viejo Sauce</span>
         </Navbar.Brand>
 
         <Navbar.Toggle
@@ -28,14 +67,14 @@ const NavbarC = () => {
             <Nav.Link as={Link} to="/nosotros">
               Nosotros
             </Nav.Link>
-
-            <Nav.Link as={Link} to="/contacto">
-              Contacto
-            </Nav.Link>
           </Nav>
 
-          {/* Botón reservar */}
-          <Button as={Link} to="/reservar" className="reserve-button">
+          <Button
+            as={Link}
+            to="/#reservas"
+            onClick={handleReservarClick}
+            className="reserve-button"
+          >
             Reservar
           </Button>
         </Navbar.Collapse>

@@ -2,14 +2,17 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
-/* 
+html,
+body {
+  overflow-x: hidden;
+}
 
+/* 
   font-family: "DM Sans", sans-serif;         PARA TEXTO GRAL
   font-family: "Playfair Display", serif;     PARA TITULOS
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
-
 */
 
 :root {

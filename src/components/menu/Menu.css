@@ -1,7 +1,248 @@
-.menu {
-  background-color: burlywood;
-  height: 50vh;
+.menu-section {
+  background-color: var(--color-surface-alt);
+  padding: 6rem clamp(1.25rem, 6vw, 6rem);
+  color: var(--color-text);
+}
+
+.menu-header {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.menu-subtitle {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.menu-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.menu-description {
+  max-width: 550px;
+  margin: 0 auto;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.menu-filters {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.menu-filters .menu-filter {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--color-text-muted);
+  padding: 0.55rem 1.1rem;
+  font-size: 0.85rem;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+.menu-filters .menu-filter:hover {
+  border-color: var(--color-accent);
+  color: var(--color-primary);
+}
+.menu-filters .menu-filter.active,
+.menu-filters .menu-filter.active:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 3rem;
+  row-gap: 2rem;
+}
+.menu-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.menu-card-image {
+  width: 115px;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.menu-card:hover .menu-card-image {
+  transform: scale(1.03);
+}
+.menu-card-content {
+  flex: 1;
+  min-width: 0;
+  padding-top: 0.2rem;
+}
+.menu-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.menu-card-heading h3 {
+  font-family: var(--font-body);
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+.menu-card-price {
+  color: var(--color-accent);
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.menu-card-content > p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.menu-footer {
+  text-align: center;
+  margin-top: 3.5rem;
+}
+.menu-footer p {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.menu-more-button {
+  background-color: var(--color-primary);
+  border: 1px solid #496d5e;
+  color: white;
+  border-radius: 6px;
+  padding: 0.8rem 1.8rem;
+  transition: background-color 0.25s ease;
+}
+.menu-more-button:hover {
+  background-color: #365247;
+  border-color: #385449;
+  color: white;
+}
+.menu-more-button:focus {
+  background-color: var(--color-primary) !important;
+  border: 1px solid #385449 !important;
+}
+
+@media (max-width: 991.98px) {
+  .menu-section {
+    padding: 5rem 2rem;
+  }
+  .menu-grid {
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+  .menu-card {
+    gap: 0.8rem;
+  }
+  .menu-card-image {
+    width: 95px;
+  }
+  .menu-card-heading h3 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-section {
+    padding: 4rem 1.25rem;
+  }
+  .menu-header {
+    margin-bottom: 2rem;
+  }
+  .menu-description {
+    font-size: 0.95rem;
+  }
+  .menu-filters {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 -0.25rem 2rem;
+    padding: 0.25rem 0.25rem 1rem;
+    scrollbar-width: thin;
+  }
+  .menu-filters .menu-filter {
+    flex-shrink: 0;
+    padding: 0.55rem 0.9rem;
+  }
+  .menu-grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 1.5rem;
+  }
+  .menu-card-image {
+    width: 100px;
+  }
+  .menu-card-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  .menu-card-heading h3 {
+    font-size: 1rem;
+  }
+  .menu-card-price {
+    font-size: 0.9rem;
+  }
+  .menu-card-content > p {
+    font-size: 0.85rem;
+  }
+  .menu-footer {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .menu-section {
+    padding: 3.5rem 1rem;
+  }
+  .menu-card {
+    gap: 0.7rem;
+  }
+  .menu-card-image {
+    width: 82px;
+  }
+  .menu-card-heading h3 {
+    font-size: 0.92rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-card-image,
+  .menu-filters .menu-filter,
+  .menu-more-button {
+    transition: none;
+  }
+  .menu-card:hover .menu-card-image,
+  .menu-more-button:hover {
+    transform: none;
+  }
 }
