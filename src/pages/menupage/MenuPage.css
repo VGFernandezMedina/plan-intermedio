@@ -1,0 +1,111 @@
+.menu-editorial-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.35)), url("/menu.webp");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-top: 100px;
+}
+.menu-editorial-section {
+  padding-top: 4rem;
+}
+.menu-header-page {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.menu-header-page span {
+  color: var(--color-mustard);
+}
+.menu-header-page h1 {
+  color: var(--color-accent);
+}
+.menu-header-page p {
+  color: var(--color-surface);
+}
+
+.editorial-menu-box {
+  background-color: rgba(0, 0, 0, 0.826);
+  backdrop-filter: blur(5px);
+  border: 1px solid #7a7773;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+.menu-category-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: var(--color-accent);
+
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-sage, #a7b39a);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.8rem;
+}
+.editorial-item {
+  margin-bottom: 1.5rem;
+}
+.editorial-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+.editorial-item-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-mustard);
+}
+.editorial-badge {
+  background-color: var(--color-wine, #743d3d) !important;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.editorial-dots {
+  flex-grow: 1;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+  margin: 0 1rem;
+}
+.editorial-item-price {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-mustard);
+  white-space: nowrap;
+}
+.editorial-item-desc {
+  font-size: 0.92rem;
+  color: var(--color-surface);
+  margin: 0;
+  line-height: 1.5;
+}
+.menu-page-cta {
+  margin-top: 3rem;
+}
+.menu-page-cta p {
+  color: var(--color-surface);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .editorial-menu-box {
+    padding: 1.5rem 1rem;
+  }
+  .editorial-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .editorial-dots {
+    display: none;
+  }
+  .editorial-item-price {
+    margin-top: 0.1rem;
+  }
+}

@@ -1,7 +1,218 @@
 .about {
-  background-color: aquamarine;
-  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 6rem clamp(1.5rem, 8vw, 8rem);
+  color: white;
+}
+
+.about-bg-parallax {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  background-image: url("/about.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  will-change: transform;
+}
+
+.about-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.about-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.about-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent-light);
+  margin-bottom: 1.5rem;
+}
+.about-subtitle::before,
+.about-subtitle::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  flex-shrink: 0;
+  background-color: var(--color-accent-light);
+  opacity: 0.5;
+}
+
+.about-title {
+  max-width: 900px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 4.5vw, 5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--color-accent-light);
+  margin-bottom: 2rem;
+  text-wrap: balance;
+}
+
+.about-description {
+  max-width: 650px;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.5;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+}
+
+.about-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.about-actions .btn {
+  padding: 0.7rem 3rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-about {
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  color: white;
+  font-weight: 600;
+}
+.btn-about:hover {
+  background-color: #a8613f;
+  border-color: #a8613f;
+  color: white;
+}
+.btn-about:focus {
+  background-color: var(--color-accent) !important;
+  border: 2px solid var(--color-accent) !important;
+}
+
+.about-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.social-icon-link:hover {
+  background-color: var(--color-accent, #bd754f);
+  border-color: var(--color-accent, #bd754f);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+  .about {
+    min-height: auto;
+    padding: 6rem 2rem;
+  }
+  .about-title {
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+  }
+  .about-description {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    padding: 5rem 1.25rem;
+  }
+  .about-content {
+    align-items: center;
+    text-align: center;
+  }
+  .about-subtitle {
+    gap: 0.65rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.25rem;
+  }
+  .about-subtitle::before,
+  .about-subtitle::after {
+    width: 24px;
+  }
+  .about-title {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+  .about-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.75rem;
+  }
+  .about-actions {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+  .about-actions .btn {
+    padding: 0.6rem 2.5rem;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 360px) {
+  .about {
+    padding: 4rem 1rem;
+  }
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-subtitle::before,
+  .about-subtitle::after {
+    width: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-actions .btn,
+  .social-icon-link {
+    transition: none;
+  }
+  .about-actions .btn:hover,
+  .social-icon-link:hover {
+    transform: none;
+  }
 }
