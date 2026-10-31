@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import SobreNosotros from "./pages/sobrenosotros/SobreNosotros";
 import MenuPage from "./pages/menupage/MenuPage";
 import ScrollToTop from "./components/scrolltotop/ScrollToTop";
+import WhatsAppButton from "./components/whatsappbutton/WhatsAppButton";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/nosotros" element={<SobreNosotros />} />
       </Routes>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 };

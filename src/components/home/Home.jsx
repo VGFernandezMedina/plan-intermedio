@@ -25,7 +25,7 @@ const Home = () => {
             Ver el menú
           </Button>
 
-          <Button className="btn-reservar" href="/reservas">
+          <Button className="btn-reservar" href="/#reservas">
             Reservar una mesa
           </Button>
         </div>

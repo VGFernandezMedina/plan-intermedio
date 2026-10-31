@@ -12,7 +12,7 @@ const ReservationForm = () => {
   });
 
   const [errorMsg, setErrorMsg] = useState("");
-  const PHONE_NUMBER = "5493811234567";
+  const PHONE_NUMBER = "549XXXXXXXXXX";
 
   const todayString = new Date().toISOString().split("T")[0];
 

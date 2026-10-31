@@ -17,6 +17,11 @@ const About = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const numero = "549XXXXXXXXXX";
+  const mensaje =
+    "¡Hola! Quisiera consultar disponibilidad para reservar una mesa en El Viejo Sauce.";
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
   return (
     <Container fluid className="about">
       <div
@@ -71,7 +76,7 @@ const About = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://wa.me/5493811234567"
+              href={url}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"

@@ -14,6 +14,11 @@ import { MdOutlineLocalPhone } from "react-icons/md";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const numero = "549XXXXXXXXXX";
+  const mensaje =
+    "¡Hola! Quisiera consultar disponibilidad para reservar una mesa en El Viejo Sauce.";
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
   return (
     <Container fluid className="footer">
       <Row className="footer-info">
@@ -58,8 +63,8 @@ const Footer = () => {
             00:00 hs.
           </p>
           <p>
-            <MdOutlineLocalPhone className="footer-icon-contact" /> +54 9 381
-            613-5750
+            <MdOutlineLocalPhone className="footer-icon-contact" /> +54 9
+            XXXXXXXXXX
           </p>
         </Col>
       </Row>
@@ -73,7 +78,7 @@ const Footer = () => {
         <Col sm="12" md="6" lg="6" className="py-3 col-icons">
           <div className="footer-icons">
             <a
-              href="https://wa.me/5493816135750"
+              href={url}
               target="_blank"
               rel="noreferrer"
               aria-label="WhatsApp"

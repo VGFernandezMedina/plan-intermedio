@@ -40,7 +40,7 @@ const Contact = () => {
                   <MdOutlineLocalPhone className="footer-icon-contact" />{" "}
                   Teléfono:
                 </strong>{" "}
-                +54 9 381 613-5750
+                +54 9 XXXXXXXXXX
               </div>
             </div>
           </div>
