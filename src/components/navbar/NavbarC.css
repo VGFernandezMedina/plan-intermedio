@@ -1,4 +1,3 @@
-/* Estado base para páginas independientes (/menu, /nosotros, etc.) */
 .restaurant-navbar.navbar-standalone {
   position: fixed;
   background-color: var(--color-primary, #263a32) !important;
